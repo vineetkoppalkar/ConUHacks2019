@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ConUHacks2019</title>
+		<script src='https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+	    <link href='https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+	    <style>
+	        body, html { 
+	            width: 100%;
+	            height: 100%;
+	            margin: 0;
+	        }
+	        #map { 
+	            width: 100%;
+	            height: 100%;
+	        }
+	     </style>
+    </head>
+    <body>
+        <div id='map' class='map'></div>
+
+         <script>
+
+    		mapboxgl.accessToken = 'pk.eyJ1Ijoicm9iZXJ0cSIsImEiOiJjanJhMnpuZDAwbzZ2NDRzN3R3bDJrYXIyIn0.r7vrbI2RSHKHpZDN65aNig';
+    		var map = new mapboxgl.Map({
+	            container: 'map',
+	            style: 'mapbox://styles/mapbox/dark-v9',
+	            center: [-73.73611450195312 ,45.537136680398625],
+	            zoom: 10,
+	            minZoon : 10,
+	            maxZoom : 0,
+	            pitch : 60
+	        });           	
+
+    	</script>
+
+    </body>
+</html>
