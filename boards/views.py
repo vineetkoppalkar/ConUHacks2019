@@ -9,7 +9,7 @@ def home(request):
     allAccidents = Accident.objects.all()
     allLocations = []
 
-    for accident in allAccidents[:2000]:
+    for accident in allAccidents:
         location = []
         location.append(float(accident.LOC_LONG))
         location.append(float(accident.LOC_LAT))
