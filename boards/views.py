@@ -2,4 +2,19 @@ from django.shortcuts import render
 from boards.models import Accident
 
 def home(request):
-    return render(request, "index.html")
+
+    # Used to clear all objects in db
+    # Accident.objects.all().delete()
+
+    allAccidents = Accident.objects.all()
+    allLocations = []
+
+    for accident in allAccidents[:2000]:
+        location = []
+        location.append(float(accident.LOC_LONG))
+        location.append(float(accident.LOC_LAT))
+        allLocations.append(location)
+
+    context = {'allLocations': allLocations}
+
+    return render(request, "index.html", context)
